@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<form action="{% url 'articles:home' %}" method="post">
+{% csrf_token %}
+<div style="width: 50%;margin: auto;">
+	<div class="card-body">
+		<h3>Find new feeds...!</h3>
+        <table class="table table-striped table-borderless" style="border: 1px solid black;">
+		  <tbody style="border: 1px solid black;">
+			<tr>
+			  <td><input type="text" name="user_email" id="user_email", placeholder="Enter your email...!" value=""></td>
+			</tr>
+          </tbody>
+        </table>
+        <input type="submit" value="Submit">
+    </div>
+</div>
+</form>
