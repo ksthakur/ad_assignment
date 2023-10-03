@@ -14,11 +14,11 @@ from rest_framework.decorators import api_view
 
 def home(request):
     defalut_text = 'tesla'
+    user_id = None
     if request.method == 'POST':
         user_email=request.POST.get('user_email')
         user_search_text=request.POST.get('user_search_text')
         form_user_id=request.POST.get('form_user_id')
-        user_id = None
         if user_search_text == None:
             try:
                 app_user = AppUsers.objects.get(email=user_email)
